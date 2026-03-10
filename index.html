@@ -44,12 +44,12 @@
             scroll-behavior: smooth;
         }
 
-        /* Ambientação Oceânica Profissional */
+        /* Designer Touch: Ocean Aesthetics */
         .hero-section {
             background: radial-gradient(circle at 50% 110%, #e0f2fe 0%, #ffffff 65%);
         }
 
-        .deep-sea-bg {
+        .deep-sea-gradient {
             background: linear-gradient(135deg, #034d82 0%, #075985 100%);
         }
 
@@ -57,13 +57,13 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(226, 232, 240, 0.8);
-            box-shadow: 0 30px 60px -15px rgba(3, 77, 130, 0.15);
+            box-shadow: 0 30px 60px -12px rgba(3, 77, 130, 0.15);
         }
 
         .btn-premium {
             background: linear-gradient(to right, #034d82, #0ea5e9);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 12px 24px -6px rgba(3, 77, 130, 0.3);
+            box-shadow: 0 12px 24px -5px rgba(3, 77, 130, 0.3);
         }
         .btn-premium:hover { transform: translateY(-3px); box-shadow: 0 20px 30px -10px rgba(3, 77, 130, 0.4); }
 
@@ -72,12 +72,12 @@
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-12px); }
         }
         .float-anim { animation: float 6s ease-in-out infinite; }
 
-        /* Accordion Logic */
-        .accordion-content { max-height: 0; overflow: hidden; transition: all 0.4s ease-out; }
+        /* Accordion Sanfona */
+        .accordion-content { max-height: 0; overflow: hidden; transition: all 0.4s ease-in-out; }
         .accordion-item.active .accordion-content { max-height: 600px; padding-bottom: 1.5rem; }
         .accordion-item.active .accordion-icon { transform: rotate(180deg); color: var(--sea-mid); }
 
@@ -87,8 +87,8 @@
         @media (max-width: 768px) {
             .mobile-stack { text-align: center; display: flex; flex-direction: column; align-items: center; }
             .hero-title { font-size: 3.25rem; line-height: 1.05; font-weight: 900; letter-spacing: -0.04em; }
-            .hero-desc { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; padding: 0 10px; }
-            .product-hero-img { max-width: 240px; margin: 15px 0 35px 0; }
+            .hero-desc { font-size: 1.15rem; line-height: 1.6; margin-bottom: 1.5rem; padding: 0 10px; }
+            .product-hero-img { max-width: 260px; margin: 15px 0 35px 0; }
         }
 
         @media (min-width: 769px) {
@@ -100,7 +100,7 @@
 </head>
 <body>
 
-    <!-- Header: Icon removed, Clean text logo, Button restored -->
+    <!-- Header: Clean & Minimalist -->
     <header class="sticky top-0 z-[100] bg-white/95 backdrop-blur-md border-b border-slate-100">
         <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
@@ -111,7 +111,7 @@
     </header>
 
     <main>
-        <!-- HERO SECTION: Master Designer Layout (Title -> Text -> Photo -> Buttons) -->
+        <!-- HERO SECTION: Master Designer Flow (Title -> Text -> Photo -> Buttons) -->
         <section class="hero-section pt-10 md:pt-24 pb-0 relative overflow-hidden">
             <div class="container mx-auto px-4 md:px-6 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-20 items-center">
@@ -128,21 +128,21 @@
                         </h1>
                         
                         <p class="hero-desc text-slate-500 font-medium max-w-xl md:text-2xl md:leading-relaxed">
-                            Marine trace minerals designed to support natural energy, hydration, digestion, and daily vitality. Replenish nutrients your body may be missing.
+                            Marine trace minerals designed to support natural energy, hydration, digestion, and daily vitality. Replenish nutrients your cells are missing.
                         </p>
                     </div>
 
-                    <!-- 2. Product Image (Correctly Scaled) -->
+                    <!-- 2. Product Image (Desejo - Scaled for professionalism) -->
                     <div class="lg:col-span-5 relative reveal flex justify-center order-2">
-                        <div class="product-hero-img relative z-10 w-full md:max-w-[380px]">
+                        <div class="product-hero-img relative z-10 w-full md:max-w-[420px]">
                             <img src="images/aqua2.png" 
-                                 alt="Aquathrive LX Bottles" 
+                                 alt="" 
                                  class="w-full h-auto drop-shadow-[0_25px_55px_rgba(3,77,130,0.2)] float-anim">
                         </div>
                         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] bg-sky-100/40 rounded-full blur-[110px] -z-10"></div>
                     </div>
 
-                    <!-- 3. Regional Call to Action -->
+                    <!-- 3. Regional Call to Action (Buttons) -->
                     <div class="lg:col-span-7 mobile-stack reveal order-3 mb-16 md:mb-24">
                         <div id="order" class="w-full max-w-lg glass-premium rounded-[2.5rem] p-6 md:p-10 border border-white shadow-2xl">
                             <h3 class="font-black text-slate-900 mb-6 flex items-center gap-2 justify-center md:justify-start">
@@ -164,12 +164,13 @@
                 </div>
             </div>
             
+            <!-- Transition Wave -->
             <svg class="w-full h-auto relative -mb-1 z-0" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 40C320 0 420 100 720 50C1020 0 1120 100 1440 60V100H0V40Z" fill="white"/>
             </svg>
         </section>
 
-        <!-- PROBLEM SECTION: Icons Fixed (Inline SVGs for reliability) -->
+        <!-- WHY MODERN DIETS SECTION -->
         <section class="py-16 md:py-32 bg-white">
             <div class="container mx-auto px-4 md:px-6 reveal">
                 <div class="max-w-4xl mx-auto text-center mb-16 md:mb-28">
@@ -179,30 +180,34 @@
                 </div>
 
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                    <!-- Fatigue -->
                     <div class="p-8 md:p-12 rounded-[2rem] bg-slate-50 border border-slate-100 hover:border-sky-200 transition-all text-center group">
                         <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2" ry="2"/><line x1="22" y1="11" x2="22" y2="13"/><line x1="6" y1="11" x2="10" y2="11"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2" ry="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="5" y1="12" x2="9" y2="12"/></svg>
                         </div>
                         <h4 class="font-black text-slate-900 text-base md:text-xl">Fatigue</h4>
                         <p class="text-xs md:text-sm text-slate-400 mt-2">Low energy despite rest.</p>
                     </div>
+                    <!-- Brain Fog -->
                     <div class="p-8 md:p-12 rounded-[2rem] bg-slate-50 border border-slate-100 hover:border-sky-200 transition-all text-center group">
                         <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a3.5 3.5 0 1 1-5.83-2.66h.01a1 1 0 0 0 .82-.34m0 0a1 1 0 0 0 0-1.2l-3-3a1 1 0 0 0-1.4 0l-3 3a1 1 0 0 0 0 1.4l3 3a1 1 0 0 0 1.4 0"/><path d="M22 10.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19c.7 0 1.2-.6 1.2-1.2v-.5c0-1.3-1-2.3-2.2-2.3H12M12 15V6a3 3 0 0 0-6 0v11a4 4 0 0 0 8 0"/></svg>
                         </div>
                         <h4 class="font-black text-slate-900 text-base md:text-xl">Brain Fog</h4>
                         <p class="text-xs md:text-sm text-slate-400 mt-2">Impaired clarity.</p>
                     </div>
+                    <!-- Bloating -->
                     <div class="p-8 md:p-12 rounded-[2rem] bg-slate-50 border border-slate-100 hover:border-sky-200 transition-all text-center group">
                         <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h3m10 0h3M12 3v3m0 12v3m-6.36-11.64l-2.12-2.12m16.96 16.96l-2.12-2.12M12 12c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-3.31 0-6 2.69-6 6h12c0-3.31-2.69-6-6-6z"/><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/></svg>
                         </div>
                         <h4 class="font-black text-slate-900 text-base md:text-xl">Bloating</h4>
-                        <p class="text-xs md:text-sm text-slate-400 mt-2">Digestive discomfort.</p>
+                        <p class="text-xs md:text-sm text-slate-400 mt-2">Digestive lack.</p>
                     </div>
+                    <!-- Dehydration -->
                     <div class="p-8 md:p-12 rounded-[2rem] bg-slate-50 border border-slate-100 hover:border-sky-200 transition-all text-center group">
                         <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
                         </div>
                         <h4 class="font-black text-slate-900 text-base md:text-xl">Dehydration</h4>
                         <p class="text-xs md:text-sm text-slate-400 mt-2">Poor absorption.</p>
@@ -212,7 +217,7 @@
         </section>
 
         <!-- PRECISION MARINE NUTRITION -->
-        <section class="py-20 md:py-32 deep-sea-bg text-white relative">
+        <section class="py-20 md:py-32 deep-sea-gradient text-white relative">
             <div class="container mx-auto px-4 md:px-6 reveal">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
                     <div class="order-2 lg:order-1 mobile-stack">
@@ -220,43 +225,92 @@
                         <div class="space-y-6">
                             <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 flex gap-5">
                                 <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg"><i data-feather="cpu"></i></div>
-                                <div><h5 class="font-black text-lg mb-1 text-white">Cellular Energy Support</h5><p class="text-sky-100 text-sm">Minerals assist enzymes involved in metabolic energy production cycles.*</p></div>
+                                <div><h5 class="font-black text-lg mb-1 text-white">Cellular Energy Support</h5><p class="text-sky-100 text-sm">Minerals assist enzymes involved in cellular energy production cycles.*</p></div>
                             </div>
                             <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 flex gap-5">
                                 <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg"><i data-feather="refresh-cw"></i></div>
                                 <div><h5 class="font-black text-lg mb-1 text-white">Advanced Bioavailability</h5><p class="text-sky-100 text-sm">Naturally structured for efficient systemic absorption and replenishment.</p></div>
                             </div>
+                            <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 flex gap-5">
+                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg"><i data-feather="zap"></i></div>
+                                <div><h5 class="font-black text-lg mb-1 text-white">Hydration Support</h5><p class="text-sky-100 text-sm">Trace minerals help maintain proper cellular fluid balance.</p></div>
+                            </div>
                         </div>
                     </div>
                     <div class="order-1 lg:order-2 flex justify-center">
                         <div class="relative w-full max-w-[160px] md:max-w-sm">
-                            <img src="images/aqua1.png" alt="Aquathrive LX Single" class="w-full h-auto drop-shadow-2xl float-anim">
+                            <img src="images/aqua1.png" alt="" class="w-full h-auto drop-shadow-2xl float-anim">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- REVIEWS SECTION: Ocean Mist Background -->
-        <section class="py-16 md:py-32 bg-[#f3faff]">
-            <div class="container mx-auto px-4 md:px-6 reveal text-center">
-                <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16">Real Customer Experiences</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto text-left">
-                    <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
-                        <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
-                        <p class="text-slate-600 italic mb-8">"I started taking Aquathrive LX as part of my daily wellness routine and noticed a difference in my overall energy consistency."</p>
-                        <p class="font-black text-slate-900 text-sm md:text-base">— Michael R., Vancouver</p>
-                    </div>
-                    <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
-                        <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
-                        <p class="text-slate-600 italic mb-8">"I prefer natural supplements without stimulants. Aquathrive LX fits perfectly into my routine."</p>
-                        <p class="font-black text-slate-900 text-sm md:text-base">— Sarah T., Sydney</p>
+        <!-- WHY PEOPLE CHOOSE SECTION -->
+        <section class="py-16 md:py-32 bg-white">
+            <div class="container mx-auto px-4 md:px-6 reveal">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-12 text-center">Why People Are Choosing Aquathrive LX</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">Marine Trace Mineral Complex</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">No Artificial Stimulants</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">Digestion & Hydration Support</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">Daily Wellness Support</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100 md:col-span-2">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">Suitable For Long-Term Use</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ SECTION: 10 Key Questions -->
+        <!-- REVIEWS SECTION: Ocean Mist with ALL 4 Reviews -->
+        <section class="py-16 md:py-32 bg-[#f3faff]">
+            <div class="container mx-auto px-4 md:px-6 reveal text-center">
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16">Real Customer Experiences</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto text-left">
+                    <!-- Michael -->
+                    <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
+                        <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
+                        <p class="text-slate-600 italic mb-8">"I started taking Aquathrive LX as part of my daily wellness routine and noticed a difference in my overall energy consistency."</p>
+                        <p class="font-black text-slate-900 text-sm">— Michael R., Vancouver</p>
+                    </div>
+                    <!-- Sarah -->
+                    <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
+                        <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
+                        <p class="text-slate-600 italic mb-8">"I prefer natural supplements without stimulants. Aquathrive LX fits perfectly into my routine."</p>
+                        <p class="font-black text-slate-900 text-sm">— Sarah T., Sydney</p>
+                    </div>
+                    <!-- Daniel -->
+                    <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
+                        <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
+                        <p class="text-slate-600 italic mb-8">"It’s now part of my daily health routine. I like the focus on minerals rather than caffeine."</p>
+                        <p class="font-black text-slate-900 text-sm">— Daniel L., Toronto</p>
+                    </div>
+                    <!-- Emily -->
+                    <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
+                        <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
+                        <p class="text-slate-600 italic mb-8">"A simple addition to my routine that supports hydration and daily vitality."</p>
+                        <p class="font-black text-slate-900 text-sm">— Emily W., Melbourne</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION: 21 Questions -->
         <section class="py-16 md:py-32 bg-white">
             <div class="container mx-auto px-4 md:px-6 max-w-4xl reveal">
                 <div class="text-center mb-16">
@@ -265,6 +319,9 @@
                 </div>
                 <div class="space-y-4" id="faq-container">
                     <!-- Gerado via JS -->
+                </div>
+                <div class="mt-16 p-8 bg-slate-50 rounded-3xl border border-slate-100 text-[10px] text-slate-400 italic leading-relaxed text-center">
+                    *Based on clinical mineral bioavailability standards. These statements reflect nutritional support for normal biological pathways and have not been evaluated as medical advice.
                 </div>
             </div>
         </section>
@@ -321,10 +378,21 @@
             { q: "Does Aquathrive LX contain caffeine?", a: "No. It is a non-stimulant formula that maintains steady energy levels without crashes." },
             { q: "How should Aquathrive LX be taken?", a: "Take once daily with water, preferably alongside a nutrient-rich meal." },
             { q: "How long does it take to notice results?", a: "Individual responses vary; some note support within days, though 4-8 weeks is recommended for full replenishment." },
-            { q: "Is Aquathrive LX available in Australia and Canada?", a: "Yes. Our distribution network ensures efficient delivery across AU & CA." },
-            { q: "What Ingredients Are Found In Aquathrive LX?", a: "Aquathrive LX contains a blend of marine-derived minerals, sea botanical extracts, electrolyte minerals, and digestive support nutrients." },
+            { q: "Is Aquathrive LX available In Australia And Canada?", a: "Yes. Our distribution network ensures efficient delivery across AU & CA." },
+            { q: "What Ingredients Are Found In Aquathrive LX?", a: "Aquathrive LX contains a blend of marine-derived minerals including Marine Trace Minerals, Sea Botanical Extracts, and Digestive Support Nutrients." },
             { q: "Can Aquathrive LX Help With Hydration?", a: "Yes. Trace minerals play an important role in maintaining electrolyte balance, which supports proper hydration." },
-            { q: "Is Aquathrive LX Suitable For Daily Use?", a: "Yes, it is designed to be used as part of a consistent daily wellness routine." }
+            { q: "Is Aquathrive LX Suitable For Daily Use?", a: "Yes, Aquathrive LX is designed to be used as part of a consistent daily wellness routine." },
+            { q: "What are marine trace minerals?", a: "Naturally occurring minerals from ocean water that support electrolyte balance and cellular function." },
+            { q: "Marine vs Synthetic minerals?", a: "Marine minerals often offer better bioavailability as they come from natural sources." },
+            { q: "Who is it for?", a: "Adults seeking more energy, better hydration, and overall mineral balance." },
+            { q: "Can I combine supplements?", a: "Usually yes, but we recommend consulting a healthcare provider first." },
+            { q: "Is it for long-term use?", a: "Yes, it is designed as a consistent daily habit for health maintenance." },
+            { q: "Where can I buy it?", a: "Exclusively on our official website and authorized online stores." },
+            { q: "Why do modern diets lack minerals?", a: "Modern industrial farming often depletes the mineral content of our soil and food." },
+            { q: "How is it different from vitamins?", a: "Vitamins are organic; minerals are inorganic building blocks essential for bodily functions." },
+            { q: "Does it support digestion?", a: "Yes, minerals help activate digestive enzymes and nutrient absorption." },
+            { q: "Can minerals affect energy?", a: "Definitely. They are necessary for the ATP production cycle in every cell." },
+            { q: "Why choose Aquathrive?", a: "It focuses on the synergistic power of ocean minerals for a balanced wellness approach." }
         ];
 
         const faqContainer = document.getElementById('faq-container');
@@ -355,7 +423,7 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
         function openModal(key) {
-            const content = key === 'privacy' ? `<h3>Privacy Policy</h3><p>We adhere to strict data protection standards to ensure your Order Information and Device data remain secure for fulfillment purposes only.</p>` : `<h3>Terms of Service</h3><p>Transactions are governed by the legal framework catering exclusively to customers in AU & CA.</p>`;
+            const content = key === 'privacy' ? `<h3>Privacy Policy</h3><p>We adhere to strict data protection standards to ensure your information remain secure. Fulfillment processed via authorized AU & CA portals.</p>` : `<h3>Terms of Service</h3><p>Transactions are governed by the laws of California, US. Using this site implies agreement to all conditions of sale.</p>`;
             document.getElementById('modal-title').innerText = key === 'privacy' ? "Privacy Policy" : "Terms of Service";
             document.getElementById('modal-content').innerHTML = content;
             document.getElementById('legal-modal').classList.remove('hidden');
