@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Favicon (Usando a foto de 1 frasco) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/aqua1.png">
 
-    <!-- SEO de Base -->
-    <title>Aquathrive LX | Minerais Marinhos Essenciais para Energia e Vitalidade</title>
-    <meta name="description" content="Aquathrive LX ajuda a repor minerais marinhos essenciais que suportam a energia natural, o equilíbrio digestivo e a vitalidade do corpo.">
+    <!-- SEO Core -->
+    <title>Aquathrive LX | Essential Marine Minerals for Energy & Vitality</title>
+    <meta name="description" content="Aquathrive LX helps replenish essential marine minerals that support natural energy, digestive balance, and full-body vitality. Marine-sourced formula.">
     
-    <!-- Ativos de Interface (Essenciais para o Layout) -->
+    <!-- UI Assets -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
@@ -34,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* Efeito de Vidro (Glassmorphism) */
         .glass {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
@@ -42,7 +41,6 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* Gradientes e Fundos */
         .bg-marine-gradient {
             background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
         }
@@ -52,11 +50,9 @@
                               radial-gradient(circle at 10% 80%, #f0f9ff 0%, transparent 40%);
         }
 
-        /* Animações de Revelação */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Estilo do Botão Principal */
         .btn-premium {
             background: linear-gradient(to right, var(--primary), var(--accent));
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -67,28 +63,27 @@
             box-shadow: 0 20px 30px -10px rgba(3, 105, 161, 0.5);
         }
 
-        /* Efeito Flutuante */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
         }
         .float-anim { animation: float 6s ease-in-out infinite; }
 
-        /* FAQ Acordeão */
+        /* FAQ Accordion Logic */
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
         }
         .accordion-item.active .accordion-content {
-            max-height: 500px;
+            max-height: 1000px;
             padding-bottom: 1.5rem;
+            transition: max-height 0.8s ease-in-out;
         }
         .accordion-item.active .accordion-icon {
             transform: rotate(180deg);
         }
 
-        /* Divisores de Onda */
         .wave-divider {
             position: absolute;
             width: 100%;
@@ -103,7 +98,7 @@
 </head>
 <body>
 
-    <!-- Cabeçalho -->
+    <!-- Professional Header -->
     <header class="sticky top-0 z-[100] glass border-b border-slate-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
@@ -115,71 +110,66 @@
             <div class="hidden lg:flex items-center gap-6">
                 <div class="flex items-center gap-2 text-[11px] font-bold text-slate-500 uppercase tracking-widest">
                     <i data-feather="shield" class="w-4 h-4 text-sky-500"></i>
-                    Qualidade Testada em Laboratório
+                    Quality Lab Tested
                 </div>
-                <a href="#order" class="text-sm font-bold text-sky-700 border-b-2 border-sky-200 hover:border-sky-500 transition-all">Ver Disponibilidade</a>
+                <a href="#order" class="text-sm font-bold text-sky-700 border-b-2 border-sky-200 hover:border-sky-500 transition-all">Check Availability</a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Secção Hero -->
+        <!-- Hero Section -->
         <section class="relative hero-bg pt-12 lg:pt-24 pb-20 overflow-hidden">
             <div class="container mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                     
-                    <!-- Lado Esquerdo: Conteúdo -->
                     <div class="lg:col-span-7 reveal">
                         <div class="inline-flex items-center gap-3 mb-8 bg-white/80 border border-slate-200 px-5 py-2 rounded-full shadow-sm">
                             <div class="flex"><i data-feather="star" class="star-filled w-3.5 h-3.5"></i><i data-feather="star" class="star-filled w-3.5 h-3.5"></i><i data-feather="star" class="star-filled w-3.5 h-3.5"></i><i data-feather="star" class="star-filled w-3.5 h-3.5"></i><i data-feather="star" class="star-filled w-3.5 h-3.5"></i></div>
-                            <span class="text-slate-900 font-extrabold text-xs uppercase tracking-widest">Confiado por mais de 2.500 clientes</span>
+                            <span class="text-slate-900 font-extrabold text-xs uppercase tracking-widest">Trusted by 2,500+ Customers</span>
                         </div>
 
                         <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-8 leading-[1.05] text-slate-900 tracking-tight">
-                            Restaure os <span class="text-sky-600">Minerais Essenciais</span> que o seu corpo precisa
+                            Restore The <span class="text-sky-600">Essential Minerals</span> Modern Diets Are Missing
                         </h1>
                         
                         <p class="text-xl md:text-2xl mb-10 text-slate-600 leading-relaxed font-medium max-w-2xl">
-                            As dietas modernas muitas vezes deixam o seu corpo desnutrido. Aquathrive LX repõe minerais de origem marinha para suportar energia, hidratação e desempenho diário.
+                            Modern food production leaves your body running on empty. Aquathrive LX replenishes marine-sourced minerals to support energy, hydration, and daily performance.
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-12">
                             <div class="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex-1">
                                 <div class="bg-sky-100 p-2 rounded-lg text-sky-600"><i data-feather="zap" class="w-5 h-5"></i></div>
-                                <span class="font-bold text-slate-800">Energia Natural</span>
+                                <span class="font-bold text-slate-800">Natural Energy</span>
                             </div>
                             <div class="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex-1">
                                 <div class="bg-sky-100 p-2 rounded-lg text-sky-600"><i data-feather="droplet" class="w-5 h-5"></i></div>
-                                <span class="font-bold text-slate-800">Hidratação Profunda</span>
+                                <span class="font-bold text-slate-800">Perfect Hydration</span>
                             </div>
                         </div>
 
-                        <!-- Caixa de Encomenda -->
                         <div id="order" class="glass rounded-[2.5rem] p-8 border border-white shadow-2xl">
                             <h3 class="font-black text-slate-900 mb-6 text-center lg:text-left flex items-center gap-2">
-                                <i data-feather="shopping-cart" class="text-sky-600"></i> Selecione o seu destino:
+                                <i data-feather="shopping-cart" class="text-sky-600"></i> Select Your Destination:
                             </h3>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <a href="https://www.knownwalk.com/2JCZKZ1X/22HP4STG/" class="btn-premium flex items-center justify-between px-8 py-5 text-white rounded-2xl font-black text-lg">
-                                    <span>Austrália</span>
+                                    <span>Australia</span>
                                     <i data-feather="chevron-right"></i>
                                 </a>
                                 <a href="https://www.knownwalk.com/2JCZKZ1X/22HMPZ4T/" class="btn-premium flex items-center justify-between px-8 py-5 text-white rounded-2xl font-black text-lg">
-                                    <span>Canadá</span>
+                                    <span>Canada</span>
                                     <i data-feather="chevron-right"></i>
                                 </a>
                             </div>
-                            <p class="text-center text-slate-400 text-[10px] mt-6 font-bold uppercase tracking-widest">Pagamento Seguro via Revendedor Oficial</p>
                         </div>
                     </div>
 
-                    <!-- Lado Direito: Imagem Hero -->
                     <div class="lg:col-span-5 relative reveal">
                         <div class="relative z-10 flex justify-center">
                             <img src="images/aqua2.png" 
-                                 alt="[Imagem dos Frascos Aquathrive LX]" 
-                                 class="w-full max-w-[360px] h-auto drop-shadow-[0_40px_40px_rgba(3,105,161,0.2)] float-anim rounded-[3rem]"
-                                 onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=600&auto=format&fit=crop'">
+                                 alt="Aquathrive LX Product Image" 
+                                 class="w-full max-w-[360px] h-auto drop-shadow-[0_50px_50px_rgba(3,105,161,0.2)] float-anim rounded-[3rem]">
                         </div>
                         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-sky-200/30 rounded-full blur-[120px] -z-10"></div>
                     </div>
@@ -191,223 +181,327 @@
             </svg>
         </section>
 
-        <!-- Secção de Problemas -->
+        <!-- Problem Section -->
         <section class="py-24 bg-white relative">
-            <div class="container mx-auto px-6 reveal">
-                <div class="max-w-4xl mx-auto text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Porque as dietas modernas nos deixam esgotados</h2>
-                    <div class="w-24 h-1.5 bg-sky-500 mx-auto rounded-full mb-8"></div>
-                    <p class="text-xl text-slate-600 leading-relaxed">
-                        O solo atual está empobrecido e os alimentos processados carecem dos minerais traços vitais que as suas células precisam para funcionar. Isto resulta em fadiga, névoa mental e má hidratação.
-                    </p>
-                </div>
-
+            <div class="container mx-auto px-6 reveal text-center">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Why Modern Diets Leave You Drained</h2>
+                <div class="w-24 h-1.5 bg-sky-500 mx-auto rounded-full mb-12"></div>
+                
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-sky-200 transition-all group">
-                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                            <i data-feather="cloud-off" class="text-slate-400 group-hover:text-sky-500"></i>
-                        </div>
-                        <h4 class="font-black text-slate-900 mb-2">Névoa Mental</h4>
-                        <p class="text-sm text-slate-500">Dificuldade de concentração e baixa clareza mental.</p>
+                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100">
+                        <h4 class="font-black text-slate-900 mb-2">Fatigue</h4>
+                        <p class="text-sm text-slate-500">Steady low energy throughout the day.</p>
                     </div>
-                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-sky-200 transition-all group">
-                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                            <i data-feather="battery" class="text-slate-400 group-hover:text-sky-500"></i>
-                        </div>
-                        <h4 class="font-black text-slate-900 mb-2">Fadiga Constante</h4>
-                        <p class="text-sm text-slate-500">Sentir-se sem energia mesmo após uma noite inteira de sono.</p>
+                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100">
+                        <h4 class="font-black text-slate-900 mb-2">Brain Fog</h4>
+                        <p class="text-sm text-slate-500">Loss of focus and mental clarity.</p>
                     </div>
-                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-sky-200 transition-all group">
-                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                            <i data-feather="wind" class="text-slate-400 group-hover:text-sky-500"></i>
-                        </div>
-                        <h4 class="font-black text-slate-900 mb-2">Inchaço</h4>
-                        <p class="text-sm text-slate-500">Desconforto digestivo ligado a desequilíbrios minerais.</p>
+                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100">
+                        <h4 class="font-black text-slate-900 mb-2">Bloating</h4>
+                        <p class="text-sm text-slate-500">Digestive discomfort and imbalance.</p>
                     </div>
-                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-sky-200 transition-all group">
-                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                            <i data-feather="coffee" class="text-slate-400 group-hover:text-sky-500"></i>
-                        </div>
-                        <h4 class="font-black text-slate-900 mb-2">Desidratação</h4>
-                        <p class="text-sm text-slate-500">Má absorção de água sem os eletrólitos corretos.</p>
+                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100">
+                        <h4 class="font-black text-slate-900 mb-2">Dehydration</h4>
+                        <p class="text-sm text-slate-500">Poor water absorption in cells.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Secção de Benefícios -->
+        <!-- Product/Solution Section -->
         <section class="py-24 bg-slate-50 overflow-hidden relative">
             <div class="container mx-auto px-6 reveal">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                    <div class="order-2 lg:order-1">
-                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 leading-tight">Nutrição Marinha de Precisão para o Desempenho Máximo</h2>
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 leading-tight">Marine Nutrition For Daily Vitality</h2>
                         <div class="space-y-6">
                             <div class="flex gap-5">
-                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg">
-                                    <i data-feather="cpu" class="w-6 h-6"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-black text-lg text-slate-900 mb-1">Energia Celular</h5>
-                                    <p class="text-slate-600">Minerais traços são cofatores na produção de ATP, a moeda de energia do seu corpo.</p>
-                                </div>
+                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg"><i data-feather="activity"></i></div>
+                                <div><h5 class="font-black text-lg text-slate-900">Cellular Energy</h5><p class="text-slate-600">Supports ATP production, your body's energy currency.</p></div>
                             </div>
                             <div class="flex gap-5">
-                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg">
-                                    <i data-feather="activity" class="w-6 h-6"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-black text-lg text-slate-900 mb-1">Equilíbrio Metabólico</h5>
-                                    <p class="text-slate-600">Suporta a resposta à insulina e o metabolismo eficiente de nutrientes.</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-5">
-                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg">
-                                    <i data-feather="refresh-cw" class="w-6 h-6"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-black text-lg text-slate-900 mb-1">Hidratação Profunda</h5>
-                                    <p class="text-slate-600">Eletrólitos de botânicos oceânicos ajudam a água a realmente entrar nas suas células.</p>
-                                </div>
+                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg"><i data-feather="refresh-cw"></i></div>
+                                <div><h5 class="font-black text-lg text-slate-900">Digestive Balance</h5><p class="text-slate-600">Helps maintain a comfortable and balanced gut environment.</p></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Lado Direito: Imagem do Produto -->
-                    <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="flex justify-center">
                         <div class="relative w-full max-w-sm">
-                            <div class="absolute inset-0 bg-sky-200/50 rounded-full blur-[80px] -z-10"></div>
-                            <img src="images/aqua1.png" 
-                                 alt="[Imagem do Frasco Único Aquathrive LX]" 
-                                 class="w-full h-auto drop-shadow-[0_40px_40px_rgba(0,0,0,0.1)] float-anim"
-                                 onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=600&auto=format&fit=crop'">
-                            <div class="absolute -bottom-4 -left-4 glass p-4 rounded-2xl border border-white/40 shadow-xl">
-                                <div class="flex items-center gap-2 mb-1">
-                                    <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                                    <span class="text-[10px] font-black text-slate-900 uppercase tracking-widest">Produto Original</span>
-                                </div>
-                                <p class="text-xs text-slate-600">Fórmula Marinha Premium</p>
-                            </div>
+                            <img src="images/aqua1.png" alt="Aquathrive Bottle" class="w-full h-auto drop-shadow-2xl float-anim">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section (Efeito Sanfona) -->
+        <!-- Comprehensive SEO FAQ Section -->
         <section class="py-24 bg-white relative">
-            <div class="container mx-auto px-6 max-w-3xl reveal">
+            <div class="container mx-auto px-6 max-w-4xl reveal">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-black text-slate-900 mb-4">Perguntas Frequentes</h2>
-                    <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Tem dúvidas? Nós temos as respostas.</p>
+                    <h2 class="text-4xl font-black text-slate-900 mb-4">Frequently Asked Questions</h2>
+                    <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Everything you need to know about Aquathrive LX</p>
                 </div>
 
                 <div class="space-y-4">
+                    <!-- 1 -->
                     <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
                         <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
-                            <span class="font-black text-slate-900 text-lg">O que torna o Aquathrive LX único?</span>
+                            <span class="font-black text-slate-900 text-lg">What is Aquathrive LX?</span>
                             <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
                         </button>
                         <div class="accordion-content px-6">
-                            <p class="text-slate-600 leading-relaxed">Diferente de suplementos comuns, o Aquathrive LX foca em minerais de origem marinha e botânicos oceânicos altamente biodisponíveis.</p>
+                            <p class="text-slate-600">Aquathrive LX is a marine mineral wellness supplement designed to support natural energy, hydration balance, digestion, and overall vitality. It contains a blend of marine trace minerals and ocean-derived nutrients.</p>
                         </div>
                     </div>
-
+                    <!-- 2 -->
                     <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
                         <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
-                            <span class="font-black text-slate-900 text-lg">Em quanto tempo verei resultados?</span>
+                            <span class="font-black text-slate-900 text-lg">What are marine trace minerals?</span>
                             <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
                         </button>
                         <div class="accordion-content px-6">
-                            <p class="text-slate-600 leading-relaxed">Muitos utilizadores sentem-se mais hidratados na primeira semana. Para restauração mineral completa, recomendamos 30 a 60 dias.</p>
+                            <p class="text-slate-600">Marine trace minerals are naturally occurring minerals sourced from ocean water and marine plants. These support electrolyte balance, nerve signaling, and metabolic activity.</p>
                         </div>
                     </div>
-
+                    <!-- 3 -->
                     <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
                         <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
-                            <span class="font-black text-slate-900 text-lg">Existem estimulantes na fórmula?</span>
+                            <span class="font-black text-slate-900 text-lg">What does Aquathrive LX help support?</span>
                             <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
                         </button>
                         <div class="accordion-content px-6">
-                            <p class="text-slate-600 leading-relaxed">Absolutamente não. O Aquathrive LX é 100% livre de cafeína e estimulantes artificiais.</p>
+                            <p class="text-slate-600">Aquathrive LX supports natural energy levels, digestive balance, hydration, electrolyte support, and cellular nutrient absorption.</p>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">How does Aquathrive LX work in the body?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">It provides marine-derived minerals absorbed into the bloodstream, helping activate enzymes involved in energy production and hydration balance.</p>
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Why are trace minerals important for health?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">They play a role in thousands of biological processes, supporting metabolism, muscle function, and nervous system signaling.</p>
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">What ingredients are in Aquathrive LX?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">A blend of marine trace minerals, sea botanicals, digestive support compounds, and nutrients for cellular energy production.</p>
+                        </div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">How do marine minerals differ from synthetic?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Natural ocean sources often offer better bioavailability, meaning your body can absorb and use them more efficiently.</p>
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Who can benefit from Aquathrive LX?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Adults seeking to support energy, digestive comfort, and hydration balance within a wellness-focused lifestyle.</p>
+                        </div>
+                    </div>
+                    <!-- 9 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">How should Aquathrive LX be taken?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Take once per day with water, preferably alongside a meal. Consistent use is recommended.</p>
+                        </div>
+                    </div>
+                    <!-- 10 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">How long to notice results?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Improvements may be noticed within days, though consistent use for several weeks is typically recommended.</p>
+                        </div>
+                    </div>
+                    <!-- 11 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Is Aquathrive LX safe for daily use?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Yes, it is designed for daily wellness support when used according to instructions.</p>
+                        </div>
+                    </div>
+                    <!-- 12 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Does it contain caffeine or stimulants?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">No. It supports natural energy by maintaining mineral balance without artificial stimulants.</p>
+                        </div>
+                    </div>
+                    <!-- 13 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Can it help with hydration?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Minerals play an important role in electrolyte balance, which is key for proper fluid balance.</p>
+                        </div>
+                    </div>
+                    <!-- 14 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Can it be combined with other supplements?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Generally yes, but always consult a healthcare professional before combining supplements.</p>
+                        </div>
+                    </div>
+                    <!-- 15 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Suitable for long-term use?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Yes, it's designed to maintain mineral balance and vitality long-term.</p>
+                        </div>
+                    </div>
+                    <!-- 16 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Where can it be purchased?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Through our official website and authorized online retailers.</p>
+                        </div>
+                    </div>
+                    <!-- 17 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Available in AU & CA?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Yes, we ship to consumers in Australia and Canada seeking natural wellness support.</p>
+                        </div>
+                    </div>
+                    <!-- 18 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Why do diets lack minerals?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Agricultural practices and food processing often reduce natural mineral content in our food.</p>
+                        </div>
+                    </div>
+                    <!-- 19 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">How is it different from traditional supplements?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">It emphasizes a synergistic blend of marine minerals rather than single isolated vitamins.</p>
+                        </div>
+                    </div>
+                    <!-- 20 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Does it support digestion?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Yes, minerals help support digestive enzyme activity and nutrient absorption.</p>
+                        </div>
+                    </div>
+                    <!-- 21 -->
+                    <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                            <span class="font-black text-slate-900 text-lg">Can minerals affect energy?</span>
+                            <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="text-slate-600">Absolutely. Minerals are essential for the processes that maintain steady energy levels all day.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Chamada Final -->
-        <section class="relative py-24 bg-marine-gradient text-white overflow-hidden">
-            <div class="container mx-auto px-6 relative z-10 text-center reveal">
-                <h2 class="text-5xl md:text-6xl font-black mb-8">Pronto para Prosperar?</h2>
-                <p class="text-xl md:text-2xl mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                    Junte-se a milhares na Austrália e no Canadá que restauraram a sua vitalidade com Aquathrive LX.
-                </p>
+        <!-- Final Call to Action -->
+        <section class="py-24 bg-marine-gradient text-white text-center">
+            <div class="container mx-auto px-6 reveal">
+                <h2 class="text-5xl md:text-6xl font-black mb-8 leading-tight">Ready To Thrive?</h2>
                 <div class="flex flex-wrap justify-center gap-6">
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/22HP4STG/" class="px-12 py-6 bg-white text-sky-900 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform">Comprar na Austrália</a>
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/22HMPZ4T/" class="px-12 py-6 bg-white text-sky-900 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform">Comprar no Canadá</a>
-                </div>
-                <div class="mt-12 opacity-60 flex justify-center items-center gap-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="h-4 brightness-0 invert" alt="Visa">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" class="h-6 brightness-0 invert" alt="Mastercard">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-5 brightness-0 invert" alt="PayPal">
+                    <a href="https://www.knownwalk.com/2JCZKZ1X/22HP4STG/" class="px-12 py-6 bg-white text-sky-900 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform">Buy in Australia</a>
+                    <a href="https://www.knownwalk.com/2JCZKZ1X/22HMPZ4T/" class="px-12 py-6 bg-white text-sky-900 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform">Buy in Canada</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer class="bg-slate-950 text-slate-500 py-20 border-t border-slate-900">
         <div class="container mx-auto px-6 text-center">
             <div class="flex items-center justify-center gap-2 mb-10">
                 <i data-feather="droplet" class="text-sky-500 w-6 h-6"></i>
-                <span class="text-white font-black text-2xl tracking-tighter uppercase">Aquathrive LX</span>
+                <span class="text-white font-black text-2xl uppercase">Aquathrive LX</span>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto mb-12 pb-16 border-b border-slate-900">
-                <div>
-                    <h5 class="text-white font-black uppercase tracking-widest text-[11px] mb-6">Centro de Envio</h5>
-                    <p class="text-sm leading-relaxed">19655 East 35th Drive, Suite #100<br>Aurora, CO. 80011, EUA</p>
-                </div>
-                <div>
-                    <h5 class="text-white font-black uppercase tracking-widest text-[11px] mb-6">Suporte</h5>
-                    <p class="text-sm leading-relaxed">Email: support@aquathrivelx.com</p>
-                </div>
-                <div>
-                    <h5 class="text-white font-black uppercase tracking-widest text-[11px] mb-6">Garantia</h5>
-                    <p class="text-sm leading-relaxed">Satisfação Garantida de 60 Dias<br>Ingredientes Naturais</p>
-                </div>
-            </div>
-
-            <p class="text-[10px] opacity-30">&copy; 2025 Aquathrive LX. Todos os direitos reservados.</p>
+            <p class="text-[10px] opacity-40 uppercase font-bold tracking-widest max-w-4xl mx-auto">
+                Disclaimer: This product is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. Consult a professional before use.
+            </p>
+            <p class="mt-10 text-[10px] opacity-30">&copy; 2025 Aquathrive LX. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Inicializar ícones
         feather.replace();
 
-        // Animação de revelação ao rolar
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Lógica do Acordeão (Sanfona)
         function toggleAccordion(button) {
             const item = button.parentElement;
             const isActive = item.classList.contains('active');
-
-            document.querySelectorAll('.accordion-item').forEach(otherItem => {
-                otherItem.classList.remove('active');
-            });
-
-            if (!isActive) {
-                item.classList.add('active');
-            }
+            
+            // Close others
+            document.querySelectorAll('.accordion-item').forEach(other => other.classList.remove('active'));
+            
+            // Toggle current
+            if (!isActive) item.classList.add('active');
         }
     </script>
 </body>
