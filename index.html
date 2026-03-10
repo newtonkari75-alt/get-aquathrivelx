@@ -47,7 +47,7 @@
         /* Estética de Luxo e Alinhamento */
         .hero-section {
             background: radial-gradient(circle at 50% 110%, #e0f2fe 0%, #ffffff 65%);
-            min-height: calc(100vh - 72px); /* Garante que caiba na tela */
+            min-height: calc(100vh - 72px);
             display: flex;
             align-items: center;
         }
@@ -57,20 +57,20 @@
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(226, 232, 240, 0.6);
-            box-shadow: 0 15px 35px -10px rgba(3, 77, 130, 0.1);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 25px 50px -12px rgba(3, 77, 130, 0.15);
         }
 
         .btn-premium {
             background: linear-gradient(to right, #034d82, #0ea5e9);
             transition: all 0.3s ease;
-            box-shadow: 0 8px 18px -4px rgba(3, 77, 130, 0.25);
+            box-shadow: 0 10px 20px -5px rgba(3, 77, 130, 0.3);
         }
-        .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 12px 22px -5px rgba(3, 77, 130, 0.35); }
+        .btn-premium:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(3, 77, 130, 0.4); }
 
-        .reveal { opacity: 0; transform: translateY(15px); transition: all 0.7s ease-out; }
+        .reveal { opacity: 0; transform: translateY(15px); transition: all 0.6s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
         @keyframes float {
@@ -79,30 +79,31 @@
         }
         .float-anim { animation: float 6s ease-in-out infinite; }
 
-        .accordion-content { max-height: 0; overflow: hidden; transition: all 0.4s ease-out; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
         .accordion-item.active .accordion-content { max-height: 600px; padding-bottom: 1.5rem; }
 
         .star-filled { color: #f59e0b; fill: #f59e0b; }
 
         /* Ajustes Mobile e Desktop Milimétricos */
         @media (max-width: 768px) {
-            .hero-section { min-height: auto; padding-top: 2rem; padding-bottom: 3rem; }
+            .hero-section { min-height: auto; padding-top: 3rem; padding-bottom: 4rem; }
             .mobile-stack { text-align: center; display: flex; flex-direction: column; align-items: center; }
-            .hero-title { font-size: 2.5rem; line-height: 1.1; font-weight: 800; letter-spacing: -0.03em; }
-            .hero-desc { font-size: 1rem; line-height: 1.5; margin-bottom: 1.5rem; }
-            .product-hero-img { max-width: 160px; margin: 15px 0 20px 0; }
-            .btn-mobile-full { width: 100%; margin-bottom: 0.5rem; }
+            .hero-title { font-size: 2.75rem; line-height: 1.05; font-weight: 800; letter-spacing: -0.04em; }
+            .hero-desc { font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; }
+            .product-hero-img { max-width: 200px; margin: 15px 0 25px 0; }
         }
 
         @media (min-width: 769px) {
-            .hero-title { font-size: 4.25rem; line-height: 1.05; font-weight: 900; letter-spacing: -0.04em; }
-            .desktop-buttons { display: flex; gap: 1rem; width: 100%; }
+            .hero-title { font-size: 4.5rem; line-height: 1.05; font-weight: 900; letter-spacing: -0.03em; }
+            .desktop-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; align-items: center; width: 100%; }
         }
+        
+        body.modal-open { overflow: hidden; }
     </style>
 </head>
 <body>
 
-    <!-- Header: Clean Minimalist -->
+    <!-- Header: Alinhado e Limpo -->
     <header class="sticky top-0 z-[100] bg-white/95 backdrop-blur-md border-b border-slate-100 h-[72px] flex items-center">
         <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
             <span class="font-black text-xl md:text-2xl tracking-tighter text-slate-900 uppercase">Aquathrive <span class="text-sky-600">LX</span></span>
@@ -111,58 +112,58 @@
     </header>
 
     <main>
-        <!-- HERO SECTION: Balanced and Screen-Fit -->
+        <!-- HERO SECTION: Primeira Dobra Completa -->
         <section class="hero-section relative overflow-hidden">
             <div class="container mx-auto px-4 md:px-6 relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
+                <div class="desktop-grid">
                     
-                    <!-- 1. Headline, Desc & Buttons (Left on Desktop, Top on Mobile) -->
-                    <div class="md:col-span-7 mobile-stack reveal">
-                        <div class="inline-flex items-center gap-2 mb-4 bg-white border border-slate-100 px-3 py-1 rounded-full shadow-sm">
-                            <div class="flex text-amber-500"><i data-feather="star" class="star-filled w-3 h-3"></i><i data-feather="star" class="star-filled w-3 h-3"></i><i data-feather="star" class="star-filled w-3 h-3"></i><i data-feather="star" class="star-filled w-3 h-3"></i><i data-feather="star" class="star-filled w-3 h-3"></i></div>
+                    <!-- 1. Texto e Botões -->
+                    <div class="md:col-span-7 mobile-stack reveal order-1">
+                        <div class="inline-flex items-center gap-2 mb-6 bg-white border border-slate-100 px-4 py-1.5 rounded-full shadow-sm">
+                            <div class="flex text-amber-500"><i data-feather="star" class="star-filled w-3.5 h-3.5"></i><i data-feather="star" class="star-filled w-3.5 h-3.5"></i><i data-feather="star" class="star-filled w-3.5 h-3.5"></i><i data-feather="star" class="star-filled w-3.5 h-3.5"></i><i data-feather="star" class="star-filled w-3.5 h-3.5"></i></div>
                             <span class="text-slate-800 font-bold text-[10px] uppercase tracking-widest">2,500+ Verified Customers</span>
                         </div>
 
-                        <h1 class="hero-title text-slate-900 mb-4 md:mb-6 text-balance">
+                        <h1 class="hero-title text-slate-900 mb-6 text-balance">
                             Restore The <span class="text-sky-600">Essential Minerals</span> Modern Diets Are Missing
                         </h1>
                         
-                        <p class="hero-desc text-slate-500 font-medium max-w-xl md:text-xl md:mb-8">
+                        <p class="hero-desc text-slate-500 font-medium max-w-xl md:text-xl md:mb-10">
                             Marine trace minerals designed to support natural energy, hydration, and daily vitality. Replenish nutrients your body may be missing.
                         </p>
 
-                        <!-- Botão Desktop (Em linha com o texto) -->
-                        <div class="hidden md:flex gap-4 mt-10">
-                            <a href="https://www.knownwalk.com/2JCZKZ1X/22HP4STG/" class="btn-premium flex-1 flex items-center justify-between px-6 py-4 text-white rounded-xl font-black text-base transition-all">
-                                <span>Get in Australia</span>
-                                <i data-feather="chevron-right" class="w-5 h-5"></i>
+                        <!-- Botões (Alinhados em linha no desktop) -->
+                        <div class="hidden md:flex gap-4">
+                            <a href="https://www.knownwalk.com/2JCZKZ1X/22HP4STG/" class="btn-premium flex-1 flex items-center justify-between px-6 py-5 text-white rounded-2xl font-black text-lg">
+                                <span>Australia</span>
+                                <i data-feather="chevron-right"></i>
                             </a>
-                            <a href="https://www.knownwalk.com/2JCZKZ1X/22HMPZ4T/" class="btn-premium flex-1 flex items-center justify-between px-6 py-4 text-white rounded-xl font-black text-base transition-all">
-                                <span>Get in Canada</span>
-                                <i data-feather="chevron-right" class="w-5 h-5"></i>
+                            <a href="https://www.knownwalk.com/2JCZKZ1X/22HMPZ4T/" class="btn-premium flex-1 flex items-center justify-between px-6 py-5 text-white rounded-2xl font-black text-lg">
+                                <span>Canada</span>
+                                <i data-feather="chevron-right"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- 2. Product Photo (Reduced size on Mobile) -->
-                    <div class="md:col-span-5 relative reveal flex justify-center">
-                        <div class="product-hero-img relative z-10 w-full md:max-w-[400px]">
-                            <img src="images/aqua2.png" alt="Aquathrive LX" class="w-full h-auto drop-shadow-2xl float-anim">
+                    <!-- 2. Produto (Otimizado para não estourar a tela) -->
+                    <div class="md:col-span-5 relative reveal flex justify-center order-2">
+                        <div class="product-hero-img relative z-10 w-full md:max-w-[420px]">
+                            <img src="images/aqua2.png" alt="Aquathrive LX bottles" class="w-full h-auto drop-shadow-2xl float-anim">
                         </div>
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-sky-100/30 rounded-full blur-[80px] -z-10"></div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] bg-sky-100/40 rounded-full blur-[100px] -z-10"></div>
                     </div>
 
-                    <!-- 3. Mobile Buttons (Shown only on Mobile, below image) -->
-                    <div class="md:hidden w-full flex flex-col gap-3 mt-4 reveal">
-                        <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1 text-center">Activate Offer:</p>
-                        <a href="https://www.knownwalk.com/2JCZKZ1X/22HP4STG/" class="btn-premium flex items-center justify-between px-6 py-4 text-white rounded-xl font-black text-base">
+                    <!-- 3. Mobile Buttons (Apenas no telemóvel, abaixo da foto) -->
+                    <div class="md:hidden w-full flex flex-col gap-3 mt-6 reveal order-3">
+                        <a href="https://www.knownwalk.com/2JCZKZ1X/22HP4STG/" class="btn-premium flex items-center justify-between px-6 py-4 text-white rounded-2xl font-black text-lg">
                             <span>Get in Australia</span>
                             <i data-feather="chevron-right"></i>
                         </a>
-                        <a href="https://www.knownwalk.com/2JCZKZ1X/22HMPZ4T/" class="btn-premium flex items-center justify-between px-6 py-4 text-white rounded-xl font-black text-base">
+                        <a href="https://www.knownwalk.com/2JCZKZ1X/22HMPZ4T/" class="btn-premium flex items-center justify-between px-6 py-4 text-white rounded-2xl font-black text-lg">
                             <span>Get in Canada</span>
                             <i data-feather="chevron-right"></i>
                         </a>
+                        <p class="text-center text-slate-400 text-[9px] uppercase font-bold tracking-widest mt-2">Limited Stock Available Today</p>
                     </div>
                 </div>
             </div>
@@ -173,131 +174,175 @@
         </section>
 
         <!-- WHY MODERN DIETS SECTION -->
-        <section class="py-16 md:py-24 bg-white">
+        <section class="py-16 md:py-32 bg-white">
             <div class="container mx-auto px-4 md:px-6 reveal text-center">
-                <div class="max-w-3xl mx-auto mb-12 md:mb-16">
+                <div class="max-w-3xl mx-auto mb-16">
                     <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">Why Modern Diets Leave You Drained</h2>
-                    <p class="text-lg text-slate-500 font-medium">Processed food environments have stripped essential trace minerals, leading to subtle vitality gaps.</p>
+                    <p class="text-lg text-slate-500 font-medium leading-relaxed">Processed food environments have stripped essential trace minerals, leading to subtle yet constant vitality gaps.</p>
                 </div>
 
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                    <!-- Fadiga (Inline SVG para garantir carregamento) -->
-                    <div class="p-6 md:p-8 rounded-[2rem] bg-slate-50 border border-slate-100 text-center">
-                        <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm text-sky-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2" ry="2"/><line x1="23" y1="13" x2="23" y2="11"/></svg>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                    <!-- Fatigue -->
+                    <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 group transition-all hover:bg-sky-50">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-600 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2" ry="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="5" y1="12" x2="9" y2="12"/></svg>
                         </div>
-                        <h4 class="font-black text-slate-900 text-sm md:text-lg">Fatigue</h4>
-                        <p class="text-[10px] md:text-xs text-slate-400 mt-1">Low energy levels.</p>
+                        <h4 class="font-black text-slate-900 text-base md:text-xl">Fatigue</h4>
+                        <p class="text-[10px] md:text-sm text-slate-400 mt-2">Low energy despite rest.</p>
                     </div>
                     <!-- Brain Fog -->
-                    <div class="p-6 md:p-8 rounded-[2rem] bg-slate-50 border border-slate-100 text-center">
-                        <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm text-sky-600">
+                    <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 group transition-all hover:bg-sky-50">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-600 group-hover:scale-110 transition-transform">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19c.7 0 1.2-.6 1.2-1.2v-.5c0-1.3-1-2.3-2.2-2.3H12M12 15V6a3 3 0 0 0-6 0v11a4 4 0 0 0 8 0"/></svg>
                         </div>
-                        <h4 class="font-black text-slate-900 text-sm md:text-lg">Brain Fog</h4>
-                        <p class="text-[10px] md:text-xs text-slate-400 mt-1">Impaired clarity.</p>
+                        <h4 class="font-black text-slate-900 text-base md:text-xl">Brain Fog</h4>
+                        <p class="text-[10px] md:text-sm text-slate-400 mt-2">Impaired focus.</p>
                     </div>
                     <!-- Bloating -->
-                    <div class="p-6 md:p-8 rounded-[2rem] bg-slate-50 border border-slate-100 text-center">
-                        <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm text-sky-600">
+                    <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 group transition-all hover:bg-sky-50">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-600 group-hover:scale-110 transition-transform">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 12a4 4 0 0 1-8 0"/></svg>
                         </div>
-                        <h4 class="font-black text-slate-900 text-sm md:text-lg">Bloating</h4>
-                        <p class="text-[10px] md:text-xs text-slate-400 mt-1">Digestive lack.</p>
+                        <h4 class="font-black text-slate-900 text-base md:text-xl">Bloating</h4>
+                        <p class="text-[10px] md:text-sm text-slate-400 mt-2">Digestive discomfort.</p>
                     </div>
                     <!-- Dehydration -->
-                    <div class="p-6 md:p-8 rounded-[2rem] bg-slate-50 border border-slate-100 text-center">
-                        <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm text-sky-600">
+                    <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 group transition-all hover:bg-sky-50">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm text-sky-600 group-hover:scale-110 transition-transform">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
                         </div>
-                        <h4 class="font-black text-slate-900 text-sm md:text-lg">Dehydration</h4>
-                        <p class="text-[10px] md:text-xs text-slate-400 mt-1">Poor absorption.</p>
+                        <h4 class="font-black text-slate-900 text-base md:text-xl">Dehydration</h4>
+                        <p class="text-[10px] md:text-sm text-slate-400 mt-2">Poor water absorption.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- PRECISION MARINE NUTRITION -->
-        <section class="py-16 md:py-28 deep-sea-bg text-white relative">
+        <section class="py-16 md:py-32 deep-sea-bg text-white relative">
             <div class="container mx-auto px-4 md:px-6 reveal">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="mobile-stack">
+                    <div class="mobile-stack text-left">
                         <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">Precision Marine Nutrition</h2>
                         <div class="space-y-6">
-                            <div class="p-5 md:p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 flex gap-4">
-                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white"><i data-feather="cpu"></i></div>
-                                <div><h5 class="font-black text-lg">Cellular Energy Support</h5><p class="text-sky-100 text-sm">Minerals assist enzymes involved in cellular energy production cycles.*</p></div>
+                            <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 flex gap-5">
+                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg"><i data-feather="cpu" class="w-6 h-6"></i></div>
+                                <div><h5 class="font-black text-lg mb-1 text-white">Cellular Energy Support</h5><p class="text-sky-100 text-sm leading-relaxed">Minerals assist enzymes involved in metabolic energy cycles.*</p></div>
                             </div>
-                            <div class="p-5 md:p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 flex gap-4">
-                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white"><i data-feather="refresh-cw"></i></div>
-                                <div><h5 class="font-black text-lg">Advanced Bioavailability</h5><p class="text-sky-100 text-sm">Naturally structured for efficient systemic absorption and replenishment.</p></div>
+                            <div class="p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 flex gap-5">
+                                <div class="w-12 h-12 bg-sky-500 rounded-xl flex-shrink-0 flex items-center justify-center text-white shadow-lg"><i data-feather="refresh-cw" class="w-6 h-6"></i></div>
+                                <div><h5 class="font-black text-lg mb-1 text-white">Advanced Bioavailability</h5><p class="text-sky-100 text-sm leading-relaxed">Naturally structured for efficient systemic absorption and replenishment.</p></div>
                             </div>
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <div class="relative w-full max-w-[150px] md:max-w-[280px]">
-                            <img src="images/aqua1.png" alt="Aquathrive LX Single" class="w-full h-auto drop-shadow-2xl float-anim">
+                        <div class="relative w-full max-w-[160px] md:max-w-sm">
+                            <img src="images/aqua1.png" alt="Aquathrive LX Bottle" class="w-full h-auto drop-shadow-2xl float-anim">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- REVIEWS SECTION -->
-        <section class="py-16 md:py-28 bg-[#f3faff]">
+        <!-- WHY PEOPLE CHOOSE SECTION -->
+        <section class="py-16 md:py-32 bg-white">
+            <div class="container mx-auto px-4 md:px-6 reveal">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-12 text-center">Why People Choose Aquathrive LX</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">Marine Trace Mineral Complex</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">Natural Energy (No Stimulants)</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">Supports Digestion & Hydration</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">Daily Wellness Support</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100 md:col-span-2">
+                            <div class="bg-green-100 p-1 rounded-full"><i data-feather="check" class="text-green-600 w-4 h-4" stroke-width="4"></i></div>
+                            <span class="font-bold text-slate-700">Suitable For Long-Term Use</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS SECTION: 4 Detailed Reviews -->
+        <section class="py-16 md:py-32 bg-[#f3faff]">
             <div class="container mx-auto px-4 md:px-6 reveal text-center">
-                <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-12">Real Customer Experiences</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">
-                    <div class="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border border-sky-100/50">
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-16">Real Customer Experiences</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto text-left">
+                    <!-- Michael -->
+                    <div class="bg-white p-10 rounded-[3rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
                         <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
-                        <p class="text-slate-600 italic mb-6 text-sm">"I started taking Aquathrive LX as part of my daily wellness routine and noticed a difference in my overall energy consistency."</p>
-                        <p class="font-black text-slate-900 text-xs">— Michael R., Vancouver</p>
+                        <p class="text-slate-600 italic mb-8 leading-relaxed">"I started taking Aquathrive LX as part of my daily wellness routine and noticed a difference in my overall energy consistency."</p>
+                        <p class="font-black text-slate-900 text-sm">— Michael R., Vancouver</p>
                     </div>
-                    <div class="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border border-sky-100/50">
+                    <!-- Sarah -->
+                    <div class="bg-white p-10 rounded-[3rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
                         <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
-                        <p class="text-slate-600 italic mb-6 text-sm">"I prefer natural supplements without stimulants. Aquathrive LX fits perfectly into my routine."</p>
-                        <p class="font-black text-slate-900 text-xs">— Sarah T., Sydney</p>
+                        <p class="text-slate-600 italic mb-8 leading-relaxed">"I prefer natural supplements without stimulants. Aquathrive LX fits perfectly into my routine."</p>
+                        <p class="font-black text-slate-900 text-sm">— Sarah T., Sydney</p>
                     </div>
-                    <!-- Reviews 3 e 4 omitidos aqui no código para brevidade mas presentes no arquivo final se necessário -->
+                    <!-- Daniel -->
+                    <div class="bg-white p-10 rounded-[3rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
+                        <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
+                        <p class="text-slate-600 italic mb-8 leading-relaxed">"It’s now part of my daily health routine. I like the focus on minerals rather than caffeine."</p>
+                        <p class="font-black text-slate-900 text-sm">— Daniel L., Toronto</p>
+                    </div>
+                    <!-- Emily -->
+                    <div class="bg-white p-10 rounded-[3rem] shadow-lg border border-sky-100/50 hover:shadow-2xl transition-all">
+                        <div class="flex text-amber-500 mb-4 gap-1"><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i><i data-feather="star" class="star-filled w-4 h-4"></i></div>
+                        <p class="text-slate-600 italic mb-8 leading-relaxed">"A simple addition to my routine that supports hydration and daily vitality."</p>
+                        <p class="font-black text-slate-900 text-sm">— Emily W., Melbourne</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ SECTION: 10 Specific Questions -->
-        <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 md:px-6 max-w-3xl reveal">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl md:text-4xl font-black text-slate-900">Frequently Asked Questions</h2>
+        <section class="py-16 md:py-32 bg-white">
+            <div class="container mx-auto px-4 md:px-6 max-w-4xl reveal">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">Frequently Asked Questions</h2>
                 </div>
-                <div class="space-y-3" id="faq-container">
-                    <!-- FAQs gerados via JS -->
+                <div class="space-y-4" id="faq-container">
+                    <!-- Gerado via JS -->
                 </div>
             </div>
         </section>
 
         <!-- FINAL CTA -->
-        <section class="py-16 md:py-24 deep-sea-bg text-white text-center">
-            <div class="container mx-auto px-4 md:px-6 reveal">
-                <h2 class="text-3xl md:text-5xl font-black mb-10 leading-tight">Ready To Thrive?</h2>
-                <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-lg mx-auto">
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/22HP4STG/" class="w-full px-8 py-5 bg-white text-sky-900 rounded-2xl font-black text-lg shadow-xl active:scale-95 transition-transform">AU Order</a>
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/22HMPZ4T/" class="w-full px-8 py-5 bg-sky-400 text-white rounded-2xl font-black text-lg shadow-xl active:scale-95 transition-transform">CA Order</a>
+        <section class="py-24 deep-sea-bg text-white text-center relative overflow-hidden">
+            <div class="container mx-auto px-4 md:px-6 reveal z-10 relative">
+                <h2 class="text-4xl md:text-7xl font-black mb-10 leading-tight">Ready To Thrive?</h2>
+                <div class="flex flex-col sm:flex-row justify-center gap-6 max-w-md mx-auto px-4">
+                    <a href="https://www.knownwalk.com/2JCZKZ1X/22HP4STG/" class="w-full px-10 py-6 bg-white text-sky-900 rounded-3xl font-black text-xl shadow-2xl transition-all hover:scale-105 active:scale-95">Australia Order</a>
+                    <a href="https://www.knownwalk.com/2JCZKZ1X/22HMPZ4T/" class="w-full px-10 py-6 bg-sky-400 text-white rounded-3xl font-black text-xl shadow-2xl transition-all hover:scale-105 active:scale-95">Canada Order</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-950 text-slate-600 py-16 border-t border-slate-900">
+    <footer class="bg-slate-950 text-slate-600 py-20 border-t border-slate-900">
         <div class="container mx-auto px-4 md:px-6 text-center">
-            <div class="flex justify-center gap-8 mb-10 text-[11px] font-bold uppercase tracking-widest">
+            <div class="flex justify-center gap-8 mb-12 text-[11px] font-bold uppercase tracking-widest">
                 <button onclick="openModal('privacy')" class="hover:text-white transition-colors">Privacy Policy</button>
                 <button onclick="openModal('terms')" class="hover:text-white transition-colors">Terms of Service</button>
             </div>
             <p class="text-[10px] opacity-40 uppercase font-bold tracking-widest max-w-4xl mx-auto leading-relaxed px-4">
-                Disclaimer: Aquathrive LX is a dietary supplement. Results vary. Consult a professional before use.<br>
+                Disclaimer: Aquathrive LX is a dietary supplement. This product is not intended to diagnose, treat, cure, or prevent any disease. Results vary. Consult a professional before use.<br>
                 &copy; 2025 Elementa Labs Aquathrive LX. All Rights Reserved.
             </p>
-            <p class="text-[9px] opacity-20 uppercase tracking-widest mt-8">Authorized Distributor</p>
+            <p class="text-[9px] opacity-20 uppercase tracking-widest mt-12">Authorized Distributor</p>
         </div>
     </footer>
 
@@ -329,7 +374,7 @@
             { q: "How Should Aquathrive LX Be Taken?", a: "Most users take Aquathrive LX once daily with water, preferably alongside a meal." },
             { q: "How Long Does It Take To Notice Results?", a: "Some individuals report noticing benefits within days, while consistent daily use over several weeks is typically recommended." },
             { q: "Is Aquathrive LX Available In Australia And Canada?", a: "Yes. Aquathrive LX is marketed for customers in Australia and Canada through its official website." },
-            { q: "What Ingredients Are Found In Aquathrive LX?", a: "Aquathrive LX contains a blend of marine-derived minerals and supportive nutrients, including trace minerals, sea botanicals and electrolytes." },
+            { q: "What Ingredients Are Found In Aquathrive LX?", a: "Aquathrive LX contains a blend of marine-derived minerals and supportive nutrients, including:<br><br>• Marine Trace Minerals<br>• Sea Botanical Extracts<br>• Electrolyte Minerals<br>• Digestive Support Nutrients<br>• Cellular Energy Support Compounds" },
             { q: "Can Aquathrive LX Help With Hydration?", a: "Trace minerals play an important role in maintaining electrolyte balance, which supports proper hydration." },
             { q: "Is Aquathrive LX Suitable For Daily Use?", a: "Aquathrive LX is designed to be used as part of a consistent daily wellness routine." }
         ];
@@ -337,13 +382,13 @@
         const faqContainer = document.getElementById('faq-container');
         faqs.forEach(item => {
             const faqDiv = document.createElement('div');
-            faqDiv.className = 'accordion-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden mb-3';
+            faqDiv.className = 'accordion-item bg-slate-50 rounded-[2rem] border border-slate-100 overflow-hidden mb-3';
             faqDiv.innerHTML = `
-                <button class="faq-toggle w-full flex justify-between items-center p-5 text-left focus:outline-none" onclick="toggleAccordion(this)">
-                    <span class="font-black text-slate-800 text-sm md:text-base pr-4">${item.q}</span>
+                <button class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                    <span class="font-black text-slate-800 text-sm md:text-lg pr-4">${item.q}</span>
                     <i data-feather="chevron-down" class="accordion-icon transition-transform text-sky-600"></i>
                 </button>
-                <div class="accordion-content px-5 md:px-8"><p class="text-xs md:text-sm text-slate-500 leading-relaxed">${item.a}</p></div>
+                <div class="accordion-content px-6 md:px-8"><p class="text-xs md:text-sm text-slate-500 leading-relaxed">${item.a}</p></div>
             `;
             faqContainer.appendChild(faqDiv);
         });
@@ -362,7 +407,7 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
         function openModal(key) {
-            const content = key === 'privacy' ? `<h3>Privacy Policy</h3><p>We adhere to strict data protection standards to ensure your information remains secure.</p>` : `<h3>Terms of Service</h3><p>Transactions are governed by the legal framework catering exclusively to customers in AU & CA.</p>`;
+            const content = key === 'privacy' ? `<h3>Privacy Policy</h3><p>We adhere to strict data protection standards to ensure your Order Information and Device data remain secure for fulfillment purposes only via CA & AU authorized portals.</p>` : `<h3>Terms of Service</h3><p>Transactions are governed by the laws of California, US. Using this site implies agreement to all conditions of sale.</p>`;
             document.getElementById('modal-title').innerText = key === 'privacy' ? "Privacy Policy" : "Terms of Service";
             document.getElementById('modal-content').innerHTML = content;
             document.getElementById('legal-modal').classList.remove('hidden');
